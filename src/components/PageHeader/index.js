@@ -4,7 +4,7 @@ import Link from 'umi/link';
 import router from 'umi/router';
 import withRouter from 'umi/withRouter';
 import { Row, Col, Breadcrumb, Button, Tabs, Tooltip } from 'antd';
-import breadcrumbMap from '@/config/constants';
+import { breadcrumbMap } from '@/config/constants';
 import { parsePathname } from '@/utils/utils';
 import styles from './index.less';
 
@@ -15,16 +15,15 @@ const PageHeader = ({ location, children, ...props }) => {
     const getHeaderData = pathname => {
         const routesList = parsePathname(pathname);
         let title = null;
-        const breadcrumbs = [{ isLink: false, title: 'Home' }];
+        let url = '';
+        const breadcrumbs = [{ key: '/home', isLink: true, link: '/dashboard', title: 'Home' }];
         let mapObj = breadcrumbMap;
-        let url = ''
         _.forEach(routesList, (routePart, i) => {
             mapObj = mapObj[routePart];
             if (i === (_.size(routesList) - 1)) {
                 title = mapObj.title;
-                url += routePart
             }
-            url += `${routePart}/`;
+            url += `/${routePart}`;
             breadcrumbs.push({
                 key: url,
                 link: url,
@@ -65,7 +64,7 @@ const PageHeader = ({ location, children, ...props }) => {
                     </Col>
                     <Col span={8} className={styles.actions}>
                         <Tooltip placement="top" title="Go back">
-                            <Button shape="round" icon="rollback" onClick={() => router.goBack()} />
+                            <Button icon="rollback" onClick={() => router.goBack()} />
                         </Tooltip>
                     </Col>
                 </Row>

@@ -120,9 +120,6 @@ export const secondsToTime = time => {
 };
 
 export const parsePathname = pathname => {
-    const list = _.split(pathname, '/');
-    if (list[_.size(list) - 1] === '') {
-        return _.dropRight(list, 1);
-    }
-    return list;
+    const trimmedPath = _.trim(pathname, '/');
+    return _.split(trimmedPath, '/');
 };

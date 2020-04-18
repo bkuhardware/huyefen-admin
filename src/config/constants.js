@@ -4,7 +4,7 @@ export const breadcrumbMap = {
         title: 'Dashboard'
     },
     users: {
-        title: 'User management',
+        title: 'Users management',
         students: {
             isLink: true,
             title: 'Students'
@@ -19,7 +19,7 @@ export const breadcrumbMap = {
         }
     },
     courses: {
-        title: 'Course management',
+        title: 'Courses management',
         courses: {
             isLink: true,
             title: 'Courses'

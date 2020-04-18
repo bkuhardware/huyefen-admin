@@ -14,6 +14,15 @@ export default {
     namespace: 'user',
     state: null,
     effects: {
+        *fetch({ payload }, { call, put }) {
+            const { callback } = payload;
+            yield delay(1200);
+            yield put({
+                type: 'save',
+                payload: USER
+            });
+            if (callback) callback();
+        },
         *login({ from, payload }, { call, put }) {
             const { phone, password } = payload;
             yield delay(1600);

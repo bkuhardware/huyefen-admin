@@ -137,10 +137,10 @@ export default [
             {
                 path: '/statistics',
                 title: 'route.basic.statistics',
-                component: '/Statistics'
+                component: 'Statistics'
             },
             {
-                path: '/report',
+                path: '/reports',
                 title: 'route.basic.report',
                 component: 'Reports'
             },

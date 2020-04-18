@@ -9,7 +9,7 @@ import styles from './index.less';
 
 const { Content } = Layout;
 
-const BasicLayout = ({ children, settings, dispatch }) => {
+const BasicLayout = ({ children }) => {
     return (
         <Layout className={styles.basicLayout}>
             <Header />

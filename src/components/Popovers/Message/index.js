@@ -118,7 +118,7 @@ const Messenger = ({ dispatch, ...props }) => {
                 style={{ boxShadow: 'none' }}
                 className={styles.badge}
             >
-                <Icon type="message" style={{ fontSize: 20 }} theme="filled" />
+                <Icon type="message" style={{ fontSize: 18 }} theme="filled" />
             </Badge>
         </span>
     );

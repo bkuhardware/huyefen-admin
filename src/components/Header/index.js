@@ -4,6 +4,7 @@ import { connect } from 'dva';
 import { Layout, Row, Col, Popover, Divider } from 'antd';
 import UserAvatar from '@/components/Avatar';
 import Notifications from '@/components/Popovers/Notification';
+import Messages from '@/components/Popovers/Message';
 import logo from '@/assets/images/main_logo.png';
 import styles from './index.less';
 
@@ -74,6 +75,9 @@ const Header = ({ user, dispatch }) => {
                         </div>
                         <div className={styles.notifications}>
                             <Notifications />
+                        </div>
+                        <div className={styles.messages}>
+                            <Messages />
                         </div>
                     </React.Fragment>
                 ) : null}

@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 import { connect } from 'dva';
-import { formatMessage } from 'umi-plugin-react/locale';
 import router from 'umi/router';
 import { Popover, List, Badge, Avatar, Icon, Empty, Spin as Loading } from 'antd';
 import UserAvatar from '@/components/Avatar';
 import { Scrollbars } from 'react-custom-scrollbars';
-import Spin from '@/elements/spin/secondary';
+import Spin from '@/elements/spins/secondary';
 import { fromNow, truncate } from '@/utils/utils';
 import styles from './index.less';
 

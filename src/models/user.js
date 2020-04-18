@@ -8,7 +8,9 @@ const USER = {
     name: 'Huyen Dang',
     avatar: null,
     email: 'luannguyentrong98@gmail.com',
-    phone: '0358684926'
+    phone: '0358684926',
+    noOfUsNotification: 25,
+    noOfUsMessage: 4
 };
 
 export default {

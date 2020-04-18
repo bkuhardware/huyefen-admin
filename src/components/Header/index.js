@@ -3,7 +3,7 @@ import Link from 'umi/link';
 import { connect } from 'dva';
 import { Layout, Row, Col, Popover, Divider } from 'antd';
 import UserAvatar from '@/components/Avatar';
-//import Notifications from '@/components/NotificationPopover';
+import Notifications from '@/components/Popovers/Notification';
 import logo from '@/assets/images/main_logo.png';
 import styles from './index.less';
 
@@ -72,9 +72,9 @@ const Header = ({ user, dispatch }) => {
                                 </div>
                             </Popover>
                         </div>
-                        {/* <div className={styles.notifications}>
+                        <div className={styles.notifications}>
                             <Notifications />
-                        </div> */}
+                        </div>
                     </React.Fragment>
                 ) : null}
             </div>

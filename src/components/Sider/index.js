@@ -88,6 +88,9 @@ const Sider = ({ location }) => {
                 <MenuItem key="/financial">
                     <Link to="/financial">Financial</Link>
                 </MenuItem>
+                <MenuItem key="/statistics">
+                    <Link to="/statistics">Statistics</Link>
+                </MenuItem>
                 <MenuItem key="/reports">
                     <Link to="/reports">Reports</Link>
                 </MenuItem>

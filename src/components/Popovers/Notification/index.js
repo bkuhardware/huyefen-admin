@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 import { connect } from 'dva';
-import { formatMessage } from 'umi-plugin-react/locale';
 import router from 'umi/router';
 import { Popover, List, Badge, Avatar, Icon, Empty, Spin as Loading } from 'antd';
 import UserAvatar from '@/components/Avatar';
@@ -36,7 +35,7 @@ const Notifications = ({ dispatch, ...props }) => {
             <Scrollbars ref={scrollEleRef} autoHeight autoHeightMax={474} onScroll={handleScroll} className={styles.scrollEle}>
                 <List
                     dataSource={notifications}
-                    rowKey={item => item._id + _.uniqueId("notification_")}
+                    rowKey={item => item._id}
                     renderItem={item => (
                         <div className={styles.notiItem} onClick={() => handleViewNotify(item)}>
                             <List.Item style={{ background: (item.seen ? 'inherit' : 'rgba(29, 165, 122, 0.05)')}}>
@@ -44,9 +43,7 @@ const Notifications = ({ dispatch, ...props }) => {
                                     avatar={(
                                         <UserAvatar
                                             size={36}
-                                            textSize={36}
-                                            style={{ background: '#1DA57A', color: 'white' }}
-                                            src={item.user.src}
+                                            src={item.user.avatar}
                                             text={item.user.name}
                                             alt="user-avatar"
                                             borderWidth={0}
@@ -128,7 +125,7 @@ const Notifications = ({ dispatch, ...props }) => {
                 className={styles.badge}
                 overflowCount={9}
             >
-                <Icon type="bell" style={{ fontSize: 18 }}/>
+                <Icon type="bell" style={{ fontSize: 20 }} theme="filled" />
             </Badge>
         </span>
     );

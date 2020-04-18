@@ -12,7 +12,7 @@ const override = css`
 
 
 export default ({ children, fontSize, isCenter = true, ...restProps}) => {
-    const icon = <SyncLoader css={isCenter ? override : null} loading={true} size={`${fontSize}px`} color="white" />
+    const icon = <SyncLoader css={isCenter ? override : null} loading={true} size={`${fontSize}px`} color="#1DA57A" />
     return (
         <Spin indicator={icon} {...restProps}>
             {children}

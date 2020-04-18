@@ -26,7 +26,7 @@ const UserAvatar = ({
             style={{
                 background: '#1DA57A',
                 color: 'white',
-                fontSize: `${(size - borderWidth) / 40}em`,
+                fontSize: `${(size - borderWidth) * 14 / 40}px`,
                 ...extraStyle
             }}
             {...props}

@@ -118,3 +118,11 @@ export const secondsToTime = time => {
     const padTime = val => val < 10 ? `0${val}` : val;
     return `${padTime(minutes)}:${padTime(seconds)}`;
 };
+
+export const parsePathname = pathname => {
+    const list = _.split(pathname, '/');
+    if (list[_.size(list) - 1] === '') {
+        return _.dropRight(list, 1);
+    }
+    return list;
+};

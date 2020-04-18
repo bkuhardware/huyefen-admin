@@ -42,5 +42,7 @@ export default {
 	'login.forgotpass': 'Forgot password',
 	'login.btn': 'Log in',
 	'login.or': 'Or',
-  	'login.registernow': 'register now!',
+	'login.registernow': 'register now!',
+	'locale.vietnamese': 'Vietnamese',
+	'locale.english': 'English'
 }

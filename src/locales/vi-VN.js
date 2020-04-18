@@ -42,5 +42,7 @@ export default {
     'login.or': 'Hoặc',
     'login.registernow': 'đăng ký ngay!',
     'userLayout.slogan1': 'Hệ thống học tập trực tuyến',
-    'userLayout.slogan2': 'Khoá học - Messenger - FAQ - Review'
+	'userLayout.slogan2': 'Khoá học - Messenger - FAQ - Review',
+	'locale.english': 'Tiếng Anh',
+	'locale.vietnamese': 'Tiếng Việt'
 }

@@ -36,7 +36,7 @@ const plugins = [
                 ],
             },
             title: {
-                defaultTitle: 'HuYeFen Teacher',
+                defaultTitle: 'HuYeFen Admin',
                 useLocale: true,
                 format: '{current}{separator}{parent}'
             },

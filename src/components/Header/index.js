@@ -1,11 +1,10 @@
 import React from 'react';
 import Link from 'umi/link';
-import router from 'umi/router';
 import { connect } from 'dva';
-import { Layout, Row, Col, Popover, Divider, Icon } from 'antd';
+import { Layout, Row, Col, Popover, Divider } from 'antd';
 import UserAvatar from '@/components/Avatar';
-import Notifications from '@/components/NotificationPopover';
-import logo from '@/assets/images/logo_white.png';
+//import Notifications from '@/components/NotificationPopover';
+import logo from '@/assets/images/main_logo.png';
 import styles from './index.less';
 
 const { Header: AntHeader } = Layout;
@@ -17,7 +16,7 @@ const Header = ({ user, dispatch }) => {
         });
     };
     return (
-        <AntHeader className={styles.header}>
+        <AntHeader theme="light" className={styles.header}>
             <div className={styles.leftContent}>
                 <div className={styles.logo}>
                     <Link to="/"><img src={logo} alt="Logo" /></Link>
@@ -40,20 +39,22 @@ const Header = ({ user, dispatch }) => {
                                                     borderWidth={0}
                                                     alt="user-avatar"
                                                     size={39}
-                                                    textSize={39}
                                                     text={user.name}
-                                                    style={{ backgroundColor: 'white', color: 'black' }}
                                                     src={user.avatar}
                                                 />
                                             </Col>
-                                            <Col span={20}>
+                                            <Col span={20} style={{ paddingLeft: '4px' }}>
                                                 <div className={styles.name}><b>{user.name}</b></div>
                                                 <div className={styles.mail}>{user.email || 'noreply@gmail.com'}</div>
                                             </Col>
                                         </Row>
-                                        <div className={styles.item} onClick={() => router.push('/settings')}>
+                                        <div className={styles.item}>
                                             <span className={styles.text}>Account settings</span>
                                         </div>
+                                        <div className={styles.item}>
+                                            <span className={styles.text}>Change password</span>
+                                        </div>
+                                        <Divider className={styles.divider} />
                                         <div className={styles.item} onClick={handleLogout}>
                                             <span className={styles.text}>Sign out</span>
                                         </div>
@@ -64,23 +65,18 @@ const Header = ({ user, dispatch }) => {
                                     <UserAvatar
                                         borderWidth={0}
                                         alt="user-avatar"
-                                        size={39}
-                                        textSize={39}
+                                        size={32}
                                         text={user.name}
-                                        style={{ backgroundColor: 'white', color: 'black' }}
                                         src={user.avatar}
                                     />
                                 </div>
                             </Popover>
                         </div>
-                        <div className={styles.notifications}>
+                        {/* <div className={styles.notifications}>
                             <Notifications />
-                        </div>
+                        </div> */}
                     </React.Fragment>
                 ) : null}
-                <div className={styles.learn}>
-                    Learn on HuYeFen
-                </div>
             </div>
         </AntHeader>
     )

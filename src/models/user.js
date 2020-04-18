@@ -4,7 +4,8 @@ import router from 'umi/router';
 
 const USER = {
     _id: 'admin_1',
-    name: 'Huyền Đặng',
+    token: 'admin-1',
+    name: 'Huyen Dang',
     avatar: null,
     email: 'luannguyentrong98@gmail.com',
     phone: '0358684926'
